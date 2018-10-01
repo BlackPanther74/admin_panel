@@ -1,10 +1,33 @@
-<div style="margin-top: 20px;">
-  <strong>Username:</strong> <%= user.username %><br />
-  <strong>Password:</strong> <%= user.password %><br />
-  <strong>Created At:</strong> <%= user.created_at_formatted %><br />
-  <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+<div class="ui form" style="margin-top: 20px;">
+  <div class="fields">
+    <div class="field">
+      <label><strong>Username:</strong></label> <%= user.username %><br />
+      <label><strong>Password:</strong></label> <%= user.password %><br />
+      <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
+      <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br /> %> %>
 
-  <%= link_to "Show User", user_path(user) %>
-  <%= link_to "Edit User", edit_user_path(user) %>
-  <%= link_to "Destroy User", user_path(user), method: :delete %>
+      <%= link_to "View", user_path(user) %>
+      <%= link_to "Edit", edit_user_path(user) %>
+      <%= link_to "Delete", user_path(user), method: :delete %>
+    <div>
+  </div>
 </div>
+  
+
+  <div class="ui form">
+  <div class="fields">
+    <div class="field">
+      <label>First name</label>
+      <input type="text" placeholder="First Name">
+    </div>
+    <div class="field">
+      <label>Middle name</label>
+      <input type="text" placeholder="Middle Name">
+    </div>
+    <div class="field">
+      <label>Last name</label>
+      <input type="text" placeholder="Last Name">
+    </div>
+  </div>
+</div> %>
+<%# </div>

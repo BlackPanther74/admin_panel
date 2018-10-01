@@ -1,3 +1,4 @@
 class Cohortsstudent < ApplicationRecord
-  belongs_to :
+  belongs_to: user
+  belongs_to: cohort
 end

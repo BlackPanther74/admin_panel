@@ -63,9 +63,9 @@ class UsersController < ApplicationController
       password: params[:user][:password]
     )
 
-    Profile.create(
-      user_id: user.id
-    )
+    # Profile.create(
+    #   user_id: user.id
+    # )
 
     session[:user_id] = user.id
 
