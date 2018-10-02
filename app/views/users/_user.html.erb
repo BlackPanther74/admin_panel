@@ -1,10 +1,10 @@
 <div class="ui form" style="margin-top: 20px;">
   <div class="fields">
     <div class="field">
-      <label><strong>Username:</strong></label> <%= user.username %><br />
+      <label><strong>Username:</strong> <%= user.username %></label><br />
       <label><strong>Password:</strong></label> <%= user.password %><br />
       <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
-      <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br /> %> %>
+      <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
 
       <%= link_to "View", user_path(user) %>
       <%= link_to "Edit", edit_user_path(user) %>
