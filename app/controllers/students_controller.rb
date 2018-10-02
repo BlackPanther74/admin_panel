@@ -60,15 +60,20 @@ class StudentsController < ApplicationController
   #   
   # end
   def create
-    student = Student.create(
-      first_name: params[:student][:first_name],
-      last_name: params[:student][:last_name],
-      age: params[:student][:age],
-      education: params[:student][:education]
+    user = User.create(
     )
 
     Profile.create(
-      student_id: student.id
+      role: "Student"
+      user_id: user.id
+    )
+
+student = Student.create(
+      first_name: params[:student][:first_name],
+      last_name: params[:student][:last_name],
+      age: params[:student][:age],
+      education: params[:student][:education],
+      profile_id: profile.id
     )
 
     # session[:student_id] = student.id

@@ -29,8 +29,8 @@ class CohortsController < ApplicationController
     cohort = Cohort.find(params[:id])
     Cohort.update(
       name: params[:cohort][:name],
-      start_date: params[:cohort][:start_date]
-      end_date: params[:cohort][:end_date]
+      start_date: params[:cohort][:start_date],
+      end_date: params[:cohort][:end_date],
       class_size: params[:cohort][:class_size]
     )
 
@@ -42,7 +42,7 @@ class CohortsController < ApplicationController
   #   
   # end
   def destroy
-    cohort = cohort.find(params[:id])
+    cohort = Cohort.find(params[:id])
     cohort.destroy
     # cohort.destroy(params[:id])
 
@@ -53,14 +53,14 @@ class CohortsController < ApplicationController
   #   erb :new
   # end
   def new
-    @cohort = cohort.new
+    @cohort = Cohort.new
   end
 
   # get '/cohorts' do
   #   
   # end
   def create
-    cohort = cohort.create(
+    cohort = Cohort.create(
       name: params[:cohort][:name],
       start_date: params[:cohort][:start_date]
       end_date: params[:cohort][:end_date]

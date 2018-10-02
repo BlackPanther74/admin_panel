@@ -61,12 +61,22 @@ class InstructorsController < ApplicationController
   #   
   # end
   def create
+    user = User.create(
+    )
+
+    Profile.create(
+      role: "Instructor"
+      user_id: user.id
+    )
+
     instructor = Instructor.create(
       first_name: params[:instructor][:first_name],
       last_name: params[:instructor][:last_name],
       age: params[:instructor][:age],
       salary: params[:instructor][:salary],
-      education: params[:instructor][:education]
+      education: params[:instructor][:education],
+      profile_id: profile.id,
+      cohort_id: nil
     )
 
     # redirect_to '/instructors/new'

@@ -1,0 +1,11 @@
+<div class="ui row">
+    <br>
+      <label><strong>coursename:</strong></label> <%= course.name %>
+      <label><strong>Hours:</strong></label> <%= course.hours %>
+      <%# <strong>Created At:</strong> <%= course.created_at_formatted %><br />
+      <%# <strong>Updated At:</strong> <%= course.updated_at_formatted %><br />
+
+      <div><%= link_to "View", course_path(course) %></div>
+      <div><%= link_to "Edit", edit_course_path(course) %></div>
+      <div><%= link_to "Delete", course_path(course), method: :delete %></div> <br />
+    </div>
