@@ -61,15 +61,17 @@ class CohortsController < ApplicationController
   # end
   def create
     cohort = cohort.create(
-      cohortname: params[:cohort][:cohortname],
-      password: params[:cohort][:password]
+      name: params[:cohort][:name],
+      start_date: params[:cohort][:start_date]
+      end_date: params[:cohort][:end_date]
+      class_size: params[:cohort][:class_size]
     )
 
     # Profile.create(
     #   cohort_id: cohort.id
     # )
 
-    session[:cohort_id] = cohort.id
+    # session[:cohort_id] = cohort.id
 
     # redirect_to '/cohorts/new'
     redirect_to cohorts_path

@@ -63,11 +63,11 @@ class UsersController < ApplicationController
       password: params[:user][:password]
     )
 
-    # Profile.create(
-    #   user_id: user.id
-    # )
+    Profile.create(
+      user_id: user.id
+    )
 
-    session[:user_id] = user.id
+    current_user = session[:user_id] = user.id
 
     # redirect_to '/users/new'
     redirect_to users_path

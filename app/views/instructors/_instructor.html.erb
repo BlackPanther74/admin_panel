@@ -1,0 +1,12 @@
+<div class="ui row">
+<br>
+  <label><strong>Email:</strong></label> <%= instructor.email %>
+  <label><strong>Role:</strong></label> <%= instructor.role %>
+  <label><strong>Status:</strong></label> <%= instructor.status %>
+  <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
+  <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+
+  <div><%= link_to "View", instructor_path(instructor) %></div>
+  <div><%= link_to "Edit", edit_instructor_path(instructor) %></div>
+  <div><%= link_to "Delete", instructor_path(instructor), method: :delete %></div> <br />
+</div>

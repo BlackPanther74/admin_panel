@@ -5,7 +5,7 @@
     <div class="field">
 
       <%= form_with(model: @user) do |form| %>
-        Username: <%= form.text_field(:username) %><br />
-        Password: <%= form.password_field(:password) %><br />
+        <label>Username:</label> <%= form.text_field(:username) %><br />
+        <label>Password:</label> <%= form.password_field(:password) %><br /><br />
         <%= form.submit %>
       <% end %>

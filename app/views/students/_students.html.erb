@@ -1,0 +1,11 @@
+<div class="ui row">
+<br>
+  <label><strong>Username:</strong></label> <%= student.first_name %>
+  <label><strong>Password:</strong></label> <%= student.last_name %>
+  <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
+  <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+
+  <div><%= link_to "View", student_path(student) %></div>
+  <div><%= link_to "Edit", edit_student_path(student) %></div>
+  <div><%= link_to "Delete", student_path(student), method: :delete %></div> <br />
+</div>

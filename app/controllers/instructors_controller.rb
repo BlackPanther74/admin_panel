@@ -30,7 +30,8 @@ class InstructorsController < ApplicationController
     Instructor.update(
       first_name: params[:instructor][:first_name],
       last_name: params[:instructor][:last_name],
-      age: params[:instructor][:age]
+      age: params[:instructor][:age],
+      salary: params[instructor][:salary],
       education: params[:instructor][:education]
     )
 
@@ -63,8 +64,8 @@ class InstructorsController < ApplicationController
     instructor = Instructor.create(
       first_name: params[:instructor][:first_name],
       last_name: params[:instructor][:last_name],
-      age: params[:instructor][:age]
-      salary: params[:instructor][:salary]
+      age: params[:instructor][:age],
+      salary: params[:instructor][:salary],
       education: params[:instructor][:education]
     )
 

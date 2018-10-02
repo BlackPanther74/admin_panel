@@ -1,2 +1,10 @@
 <h1>Students#edit</h1>
 <p>Find me in app/views/students/edit.html.erb</p>
+
+<%= form_with(model: @student) do |form| %>
+  <label>First Name:</label> <%= form.text_field(:first_name) %><br />
+  <label>Last Name:</label> <%= form.text_field(:last_name) %><br /><br />
+  <label>Age:</label> <%= form.text_field(:age) %><br /><br />
+  <label>Education:</label> <%= form.text_field(:education) %><br /><br />
+  <%= form.submit %>
+<% end %>

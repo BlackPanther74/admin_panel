@@ -3,21 +3,17 @@
 
 <!-- users_path == /users -->
 <!-- Very much a user sign up form -->
-  <div class="ui form">
-  <div class="fields">
+  <%# <div class="ui form">
+  <div class="fields"> %>
 <%= form_with(model: @user) do |form| %>
-    <div class="field">
-  <label>Username:</label> <%= form.text_field(:username) %><br /> 
-      </div>
-  <div class="field">
-  <label>Password:</label> <%= form.password_field(:password) %> ><br />
-  </div>
-  <div class="ui button"><%= form.submit %></div>
+  Username: <%= form.text_field(:username) %> 
+  Password: <%= form.password_field(:password) %> <br /><br />
+  <%= form.submit %>
 <% end %>
-  </div>
-</div>
+  <%# </div>
+</div> %>
 
-  <div class="ui form">
+  <%# <div class="ui form">
   <div class="fields">
     <div class="field">
       <label>First name</label>
@@ -32,4 +28,4 @@
       <input type="text" placeholder="Last Name">
     </div>
   </div>
-</div> %>
+</div> %> %>

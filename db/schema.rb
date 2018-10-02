@@ -48,10 +48,12 @@ ActiveRecord::Schema.define(version: 2018_09_28_074247) do
     t.integer "age"
     t.integer "salary"
     t.string "education"
+    t.bigint "profile_id"
     t.bigint "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cohort_id"], name: "index_instructors_on_cohort_id"
+    t.index ["profile_id"], name: "index_instructors_on_profile_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -69,10 +71,12 @@ ActiveRecord::Schema.define(version: 2018_09_28_074247) do
     t.string "last_name"
     t.integer "age"
     t.string "education"
+    t.bigint "profile_id"
     t.bigint "cohort_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cohort_id"], name: "index_students_on_cohort_id"
+    t.index ["profile_id"], name: "index_students_on_profile_id"
   end
 
   create_table "users", force: :cascade do |t|

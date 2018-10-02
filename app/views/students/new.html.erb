@@ -1,2 +1,11 @@
 <h1>Students#new</h1>
 <p>Find me in app/views/students/new.html.erb</p>
+
+<%= form_with(model: @student) do |form| %>
+  First Name: <%= form.text_field(:first_name) %> 
+  Last Name: <%= form.text_field(:last_name) %> <br />
+  <label>Age:</label> <%= form.text_field(:age) %><br />
+  <label>Education:</label> <%= form.text_field(:education) %><br /><br />
+  <%= form.submit %>
+<% end %>
+

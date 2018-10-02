@@ -1,2 +1,9 @@
 <h1>Profiles#edit</h1>
 <p>Find me in app/views/profiles/edit.html.erb</p>
+
+<%= form_with(model: @profile) do |form| %>
+  <label>First Name:</label> <%= form.text_field(:email) %><br />
+  <label>Last Name:</label> <%= form.text_field(:role) %><br />
+  <label>Status:</label> <%= form.text_field(:status) %><br /><br />
+  <%= form.submit %>
+<% end %>

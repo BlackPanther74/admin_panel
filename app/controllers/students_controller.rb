@@ -30,7 +30,7 @@ class StudentsController < ApplicationController
     Student.update(
       first_name: params[:student][:first_name],
       last_name: params[:student][:last_name],
-      age: params[:student][:age]
+      age: params[:student][:age],
       education: params[:student][:education]
     )
 
@@ -63,7 +63,7 @@ class StudentsController < ApplicationController
     student = Student.create(
       first_name: params[:student][:first_name],
       last_name: params[:student][:last_name],
-      age: params[:student][:age]
+      age: params[:student][:age],
       education: params[:student][:education]
     )
 
@@ -71,7 +71,7 @@ class StudentsController < ApplicationController
       student_id: student.id
     )
 
-    session[:student_id] = student.id
+    # session[:student_id] = student.id
 
     # redirect_to '/students/new'
     redirect_to students_path
