@@ -62,8 +62,8 @@ class CohortsController < ApplicationController
   def create
     cohort = Cohort.create(
       name: params[:cohort][:name],
-      start_date: params[:cohort][:start_date]
-      end_date: params[:cohort][:end_date]
+      start_date: params[:cohort][:start_date],
+      end_date: params[:cohort][:end_date],
       class_size: params[:cohort][:class_size]
     )
 

@@ -61,13 +61,13 @@ class InstructorsController < ApplicationController
   #   
   # end
   def create
-    user = User.create(
-    )
+    # user = User.create(
+    # )
 
-    Profile.create(
-      role: "Instructor"
-      user_id: user.id
-    )
+    # Profile.create(
+    #   role: "Instructor"
+    #   user_id: user.id
+    # )
 
     instructor = Instructor.create(
       first_name: params[:instructor][:first_name],

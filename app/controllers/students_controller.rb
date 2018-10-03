@@ -60,13 +60,13 @@ class StudentsController < ApplicationController
   #   
   # end
   def create
-    user = User.create(
-    )
+    # user = User.create(
+    # )
 
-    Profile.create(
-      role: "Student"
-      user_id: user.id
-    )
+    # Profile.create(
+    #   role: "Student"
+    #   user_id: user.id
+    # )
 
 student = Student.create(
       first_name: params[:student][:first_name],
