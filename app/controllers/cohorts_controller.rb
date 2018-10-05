@@ -27,7 +27,7 @@ class CohortsController < ApplicationController
   # end
   def update
     cohort = Cohort.find(params[:id])
-    Cohort.update(
+    cohort.update(
       name: params[:cohort][:name],
       start_date: params[:cohort][:start_date],
       end_date: params[:cohort][:end_date],

@@ -27,7 +27,7 @@ class StudentsController < ApplicationController
   # end
   def update
     student = Student.find(params[:id])
-    Student.update(
+    student.update(
       first_name: params[:student][:first_name],
       last_name: params[:student][:last_name],
       age: params[:student][:age],
@@ -73,7 +73,7 @@ student = Student.create(
       last_name: params[:student][:last_name],
       age: params[:student][:age],
       education: params[:student][:education],
-      profile_id: profile.id
+      profile_id: nil
     )
 
     # session[:student_id] = student.id

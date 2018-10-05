@@ -27,7 +27,7 @@ class ProfilesController < ApplicationController
   # end
   def update
     profile = Profile.find(params[:id])
-    Profile.update(
+    profile.update(
       email: params[:profile][:email],
       role: params[:profile][:role],
       status: params[:profile][status],

@@ -1,8 +1,11 @@
 <h1>Instructors#new</h1>
 <p>Find me in app/views/instructors/new.html.erb</p>
 
-<%= form_with(model: @student) do |form| %>
-  First Name: <%= form.text_field(:first_name) %> 
-  Last Name: <%= form.text_field(:last_name) %> <br /><br />
+<%= form_with(model: @instructor) do |form| %>
+  <label>First Name:</label> <%= form.text_field(:first_name) %> 
+  <label>Last Name:</label> <%= form.text_field(:last_name) %> <br />
+  <label>Age:</label> <%= form.text_field(:age) %><br />
+  <label>Salary:</label> <%= form.text_field(:salary) %><br />
+  <label>Education:</label> <%= form.text_field(:education) %><br /><br />
   <%= form.submit %>
 <% end %>

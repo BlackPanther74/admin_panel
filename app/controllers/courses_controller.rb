@@ -27,7 +27,7 @@ class CoursesController < ApplicationController
   # end
   def update
     course = Course.find(params[:id])
-    Course.update(
+    course.update(
       name: params[:course][:name],
       hours: params[:course][:hours]
     )

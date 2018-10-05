@@ -1,7 +1,7 @@
 <h1>Courses#edit</h1>
 <p>Find me in app/views/courses/edit.html.erb</p>
 
-      <%= form_with(model: @user) do |form| %>
+      <%= form_with(model: @course) do |form| %>
         <label>Name:</label> <%= form.text_field(:name) %><br />
         <label>Hours:</label> <%= form.text_field(:hours) %><br /><br />
         <%= form.submit %>

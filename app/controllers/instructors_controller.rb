@@ -75,8 +75,8 @@ class InstructorsController < ApplicationController
       age: params[:instructor][:age],
       salary: params[:instructor][:salary],
       education: params[:instructor][:education],
-      profile_id: profile.id,
-      cohort_id: nil
+      # profile_id: nil,
+      # cohort_id: nil
     )
 
     # redirect_to '/instructors/new'

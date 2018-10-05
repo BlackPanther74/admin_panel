@@ -1,0 +1,14 @@
+<div class="ui row">
+<br>
+  <label><strong>Name:</strong></label> <%= cohort.name %>
+  <label><strong>Start Date:</strong></label> <%= cohort.start_date %>
+  <label><strong>End Date:</strong></label> <%= cohort.end_date %>
+  <label><strong>Class Size:</strong></label> <%= cohort.class_size %>
+  <label><strong>Course:</strong></label> <%= cohort.course_id %>
+  <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
+  <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+
+  <div><%= link_to "View", cohort_path(cohort) %></div>
+  <div><%= link_to "Edit", edit_cohort_path(cohort) %></div>
+  <div><%= link_to "Delete", cohort_path(cohort), method: :delete %></div> <br />
+</div>
