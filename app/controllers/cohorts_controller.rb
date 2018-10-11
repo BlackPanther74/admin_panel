@@ -64,7 +64,8 @@ class CohortsController < ApplicationController
       name: params[:cohort][:name],
       start_date: params[:cohort][:start_date],
       end_date: params[:cohort][:end_date],
-      class_size: params[:cohort][:class_size]
+      class_size: params[:cohort][:class_size],
+      course_id: params[:cohort][:course_id]
     )
 
     # Profile.create(

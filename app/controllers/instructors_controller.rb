@@ -74,7 +74,7 @@ class InstructorsController < ApplicationController
       last_name: params[:instructor][:last_name],
       age: params[:instructor][:age],
       salary: params[:instructor][:salary],
-      education: params[:instructor][:education],
+      education: params[:instructor][:education]
       # profile_id: nil,
       # cohort_id: nil
     )
