@@ -12,10 +12,14 @@ hr
       <div class="card-body">
 
       <%= form_with(model: @user) do |form| %>
-        <label>Username:</label> <br>
-        <%= form.text_field(:username) %><br />
+        <strong><label>Name:</label></strong> <br>
+        <%= form.text_field(:name) %><br />
+        <label>Email:</label> <br>
+        <%= form.text_field(:email) %><br />
         <label>Password:</label> <br>
         <%= form.password_field(:password) %><br /><br />
+        <label>Password:</label> <br>
+        <%= form.password_field(:password_confirmation) %><br /><br />
         <%= form.submit class: "btn btn-primary"%>
       <% end %>
             </div>

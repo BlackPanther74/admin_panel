@@ -1,4 +1,6 @@
 <h1>Cohort List</h1>
+<a href="/cohorts/new" class="btn btn-primary">Add Cohort</a>
+<hr>
 
 <% @cohorts.each do |cohort| %>
   <%= render partial: 'cohort', locals: { cohort: cohort } %>

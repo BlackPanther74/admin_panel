@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   # makes this available in every view
-  # helper_method :current_user
-  # helper_method :authorize
+  helper_method :current_user
+  helper_method :authorize
 
   def current_user
     # the following code is shorthand for line 5-7

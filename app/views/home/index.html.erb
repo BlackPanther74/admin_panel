@@ -8,11 +8,11 @@
          <a href="#" class="list-group-item list-group-item-action active bg-dark">
            <span class="glyphicons glyphicons-cogwheel"></span> Dashboard
          </a>
-         <a href="/users" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span> Users <span class="badge badge-secondary">12</span></a>
-         <a href="/courses" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Courses <span class="badge badge-secondary">56</span></a>
-         <a href="/courses" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Cohorts <span class="badge badge-secondary">78</span></a>
-         <a href="/instructors" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Instructors <span class="badge badge-secondary">96</span></a>
-         <a href="students" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Students <span class="badge badge-secondary">100</span></a>
+         <a href="/users" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span> Users <span class="badge badge-secondary"><%= @users.size %></span></a>
+         <a href="/courses" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Courses <span class="badge badge-secondary"><%= @courses.size %></span></a>
+         <a href="/cohorts" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Cohorts <span class="badge badge-secondary"><%= @cohorts.size %> </span></a>
+         <a href="/instructors" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Instructors <span class="badge badge-secondary"><%= @instructors.size %> </span></a>
+         <a href="students" class="list-group-item list-group-item-action"><span class="glyphicons glyphicons-cogwheel"></span>Students <span class="badge badge-secondary"><%= @students.size %> </span></a>
          <!-- <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a> -->
         </div>
 ​
