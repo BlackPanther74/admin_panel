@@ -1,11 +1,16 @@
-<h1>Cohorts#new</h1>
-<p>Find me in app/views/cohorts/new.html.erb</p>
+<h1>Add Cohort</h1>
+<hr>
 
 <%= form_with(model: @cohort) do |form| %>
-  Name: <%= form.text_field(:name) %> 
-  Start Date: <%= form.text_field(:start_date) %> 
-  End Date: <%= form.text_field(:end_date) %> 
-  Class Size: <%= form.text_field(:class_size) %> 
-  Course: <%= form.text_field(:course_id) %> 
-<%= form.submit %>
+  <strong> Name:</strong> <br>
+  <%= form.text_field(:name) %> <br>
+  <strong>Start Date:</strong> <br>
+  <%= form.text_field(:start_date) %> <br>
+  <strong>End Date:</strong> <br>
+  <%= form.text_field(:end_date) %> <br>
+  <strong>Class Size:</strong> <br>
+  <%= form.text_field(:class_size) %> <br>
+  <strong>Course:</strong> <br>
+  <%= form.text_field(:course_id) %> <br> <br>
+<%= form.submit class: "btn btn-primary" %>
 <% end %>

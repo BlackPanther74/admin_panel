@@ -1,31 +1,8 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Add User</h1>
+<hr>
 
-<!-- users_path == /users -->
-<!-- Very much a user sign up form -->
-  <%# <div class="ui form">
-  <div class="fields"> %>
 <%= form_with(model: @user) do |form| %>
   Username: <%= form.text_field(:username) %> 
   Password: <%= form.password_field(:password) %> <br /><br />
-  <%= form.submit %>
+  <%= form.submit class: "btn btn-primary" %>
 <% end %>
-  <%# </div>
-</div> %>
-
-  <%# <div class="ui form">
-  <div class="fields">
-    <div class="field">
-      <label>First name</label>
-      <input type="text" placeholder="First Name">
-    </div>
-    <div class="field">
-      <label>Middle name</label>
-      <input type="text" placeholder="Middle Name">
-    </div>
-    <div class="field">
-      <label>Last name</label>
-      <input type="text" placeholder="Last Name">
-    </div>
-  </div>
-</div> %> %>

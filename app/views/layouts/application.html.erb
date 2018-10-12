@@ -10,9 +10,89 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var url = window.location;
+            $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+            $('ul.nav a').filter(function() {
+                return this.href == url;
+            }).parent().addClass('active');
+        });
+    </script>     
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
 </head>
+<!-- Fixed navbar -->
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Admin Panel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       <a class="nav-link" href="/home">Dashboard <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="/users">Users</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="/courses">Courses</a>
+      </li> 
+      <li class="nav-item">
+       <a class="nav-link" href="/cohorts">Cohorts</a>
+      </li> 
+      <li class="nav-item">
+       <a class="nav-link" href="/instructors">Instructors</a>
+      </li> 
+      <li class="nav-item">
+       <a class="nav-link" href="/students">Students</a>
+      </li>
+     </ul>
+     <ul class="navbar-nav navbar-right">
+      <li class="nav-item active">
+       <a class="nav-link" href="#">Welcome, Garth <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">Logout</a>
+      </li>
+     </ul>
+    </div>
+    
+   </nav>
+  </header>
+​
+  <main id="header">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-10">
+      <h1><span class="glyphicons glyphicons-cogwheel"></span> Dashboard <small>Manage your site</small></h1>
+     </div>
+     <div class="col-md-2">
+       <div class="dropdown">
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Create Content
+         </button>
+         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/users/new">Add User</a>
+          <a class="dropdown-item" href="/courses/new">Add Course</a>
+          <a class="dropdown-item" href="/cohorts/new">Add Cohort</a>
+          <a class="dropdown-item" href="/instructors/new">Add Instructor</a>
+          <a class="dropdown-item" href="/students/new">Add Student</a>
+         </div>
+        </div>
+     </div>
+    </div>
+   </div>
+  </main>
+​
+  <section id="breadcrumb">
+   <div class="container">
+    <ol class="breadcrumb">
+     <li class="active">Dashboard</li>
+    </ol>
+   </div>
+  </section>
 
   <body>
     <%= yield %>

@@ -1,14 +1,29 @@
-<div class="ui row">
-<br>
-  <label><strong>Username:</strong></label> <%= instructor.first_name %>
-  <label><strong>Password:</strong></label> <%= instructor.last_name %>
-  <label><strong>age:</strong></label> <%= instructor.age %>
-  <label><strong>education:</strong></label> <%= instructor.salary %>
-  <label><strong>Password:</strong></label> <%= instructor.education %>
-  <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
-  <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+<div class="row">
+  <div class="col-sm-4">
+  </div>
 
-  <div><%= link_to "View", instructor_path(instructor) %></div>
-  <div><%= link_to "Edit", edit_instructor_path(instructor) %></div>
-  <div><%= link_to "Delete", instructor_path(instructor), method: :delete %></div> <br />
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <label><strong>Username:</strong></label> <br>
+        <%= instructor.first_name %> <br>
+        <label><strong>Password:</strong></label> <br>
+        <%= instructor.last_name %> <br>
+        <label><strong>age:</strong></label> <br>
+        <%= instructor.age %> <br>
+        <label><strong>education:</strong></label> <br>
+        <%= instructor.salary %> <br>
+        <label><strong>Password:</strong></label> <br>
+        <%= instructor.education %> <br>
+        <strong>Created At:</strong> <%= instructor.created_at_formatted %> <br />
+        <strong>Updated At:</strong> <%= instructor.updated_at_formatted %> <br /> <br>
+
+        <%= link_to "View", instructor_path(instructor), class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_instructor_path(instructor), class: "btn btn-success" %>
+        <%= link_to "Delete", instructor_path(instructor), method: :delete, class: "btn btn-danger" %> <br />
+      </div>
+    </div>
+  </div>
 </div>
+<hr>

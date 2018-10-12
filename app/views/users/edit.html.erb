@@ -1,11 +1,25 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
-<div class="ui form" style="margin-top: 20px;">
-  <div class="fields">
-    <div class="field">
+<h1>Edit User</h1>
+hr
+
+<hr>
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
 
       <%= form_with(model: @user) do |form| %>
-        <label>Username:</label> <%= form.text_field(:username) %><br />
-        <label>Password:</label> <%= form.password_field(:password) %><br /><br />
-        <%= form.submit %>
+        <label>Username:</label> <br>
+        <%= form.text_field(:username) %><br />
+        <label>Password:</label> <br>
+        <%= form.password_field(:password) %><br /><br />
+        <%= form.submit class: "btn btn-primary"%>
       <% end %>
+            </div>
+    </div>
+  </div>
+</div>
+<hr>

@@ -1,8 +1,10 @@
-<h1>Courses#edit</h1>
-<p>Find me in app/views/courses/edit.html.erb</p>
+<h1>Edit Course</h1>
+<hr>
 
       <%= form_with(model: @course) do |form| %>
-        <label>Name:</label> <%= form.text_field(:name) %><br />
-        <label>Hours:</label> <%= form.text_field(:hours) %><br /><br />
-        <%= form.submit %>
+        <label>Name:</label> <br>
+        <%= form.text_field(:name) %><br />
+        <label>Hours:</label> <br>
+        <%= form.text_field(:hours) %><br /><br />
+        <%= form.submit class: "btn btn-primary" %>
       <% end %>

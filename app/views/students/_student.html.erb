@@ -1,13 +1,29 @@
-<div class="ui row">
-<br>
-  <label><strong>Username:</strong></label> <%= student.first_name %>
-  <label><strong>Password:</strong></label> <%= student.last_name %>
-  <label><strong>age:</strong></label> <%= student.age %>
-  <label><strong>education:</strong></label> <%= student.education %>
-  <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
-  <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+<div class="row">
+  <div class="col-sm-4">
+  </div>
 
-  <div><%= link_to "View", student_path(student) %></div>
-  <div><%= link_to "Edit", edit_student_path(student) %></div>
-  <div><%= link_to "Delete", student_path(student), method: :delete %></div> <br />
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <label><strong>First Name:</strong></label> <br>
+        <%= student.first_name %> <br>
+        <label><strong>Last Name:</strong></label> <br>
+        <%= student.last_name %> <br>
+        <label><strong>Age:</strong></label> <br>
+        <%= student.age %> <br>
+        <label><strong>Education:</strong></label> <br>
+        <%= student.education %> <br>
+        <strong>Created At:</strong> <br>
+        <%= student.created_at_formatted %><br />
+        <strong>Updated At:</strong> <br>
+        <%= student.updated_at_formatted %><br /> <br>
+        
+        <%= link_to "View", student_path(student), class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_student_path(student), class: "btn btn-success" %>
+        <%= link_to "Delete", student_path(student), method: :delete, class: "btn btn-danger" %> <br />
+      </div>
+    </div>
+  </div>
 </div>
+<hr>

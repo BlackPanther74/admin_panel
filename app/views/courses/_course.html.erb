@@ -1,11 +1,23 @@
-<div class="ui row">
-    <br>
-      <label><strong>Name:</strong></label> <%= course.name %>
-      <label><strong>Hours:</strong></label> <%= course.hours %>
-      <%# <strong>Created At:</strong> <%= course.created_at_formatted %><br />
-      <%# <strong>Updated At:</strong> <%= course.updated_at_formatted %><br />
+<div class="row">
+  <div class="col-sm-4">
+  </div>
 
-      <div><%= link_to "View", course_path(course) %></div>
-      <div><%= link_to "Edit", edit_course_path(course) %></div>
-      <div><%= link_to "Delete", course_path(course), method: :delete %></div> <br />
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <label><strong>Name:</strong></label> <br>
+        <%= course.name %> <br>
+        <label><strong>Hours:</strong></label> <br>
+        <%= course.hours %> <br>
+        <strong>Created At:</strong> <%= course.created_at_formatted %><br /> 
+        <strong>Updated At:</strong> <%= course.updated_at_formatted %><br /><br>
+
+        <%= link_to "View", course_path(course), class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_course_path(course), class: "btn btn-success" %>
+        <%= link_to "Delete", course_path(course), method: :delete, class: "btn btn-danger" %></div> <br />
+      </div>
     </div>
+  </div>
+</div>
+<hr>

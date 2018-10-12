@@ -10,13 +10,15 @@
   Last Name: <%= form.text_field(:last_name) %> <br />
 </div>
 <div class="form-group">
-  <label>Age:</label> <%= form.text_field(:age) %><br />
+  <label>Age:</label> <br> 
+  <%= form.text_field(:age) %><br />
 </div>
 <div class="form-group">
-  <label>Education:</label> <%= form.text_field(:education) %><br /><br />
+  <label>Education:</label> <br>
+  <%= form.text_field(:education) %><br /><br />
 </div>
 <div class="btn btn-primary">
-  <%= form.submit %>
+  <%= form.submit class: "btn btn-primary" %>
 </div>
 <% end %>
 </div>

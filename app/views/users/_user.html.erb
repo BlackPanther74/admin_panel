@@ -1,26 +1,21 @@
- <div class="container">
-  <div class="row">
+<div class="row">
+  <div class="col-sm-4">
+  </div>
 
-    <div class="col-sm">
-      <%# One of three columns %>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+          <label><strong>Username:</strong></label> <%= user.username %> <br>
+          <label><strong>Password:</strong></label> <%= user.password %> <br>
+          <strong>Created At:</strong> <%= user.created_at_formatted %> <br />
+          <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+          <br>
+          <%= link_to "View", user_path(user), class: "btn btn-primary" %>
+          <%= link_to "Edit", edit_user_path(user), class: "btn btn-success" %>
+          <%= link_to "Delete", user_path(user), method: :delete, class: "btn btn-danger" %> <br />
+      </div>
     </div>
-
-    
-    <div class="col-sm user">
-    <br>
-      <label><strong>Username:</strong></label> <%= user.username %> <br>
-      <label><strong>Password:</strong></label> <%= user.password %> <br>
-      <strong>Created At:</strong> <%= user.created_at_formatted %> <br />
-      <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
-
-       <div> <%= link_to "View", user_path(user) %>
-      <%= link_to "Edit", edit_user_path(user) %>
-      <%= link_to "Delete", user_path(user), method: :delete %></div> <br />
-    <%# </div> %>
-   </div>
-
-     <div class="col-sm">
-      <%# One of three columns %>
-    </div>
-    </div>
+  </div>
 </div>
+<hr>
