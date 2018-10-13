@@ -1,6 +1,15 @@
 <h1>Edit Course</h1>
 <hr>
 
+<div class="row">
+
+  <div class="col-sm-4">
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
       <%= form_with(model: @course) do |form| %>
         <label>Name:</label> <br>
         <%= form.text_field(:name) %><br />
@@ -8,3 +17,8 @@
         <%= form.text_field(:hours) %><br /><br />
         <%= form.submit class: "btn btn-primary" %>
       <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>      

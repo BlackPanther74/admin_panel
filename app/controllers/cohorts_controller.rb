@@ -46,7 +46,12 @@ class CohortsController < ApplicationController
     cohort.destroy
     # cohort.destroy(params[:id])
 
-    redirect_to cohorts_path
+    respond_to do |format|
+      format.html
+      format.js {render '/cohorts/destroy.js.erb'}
+    end
+
+    # redirect_to cohorts_path
   end
 
   # get '/cohorts/new' do

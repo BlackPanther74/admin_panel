@@ -1,10 +1,25 @@
 <h1>Add Course</h1>
 <hr>
 
-<%= form_with(model: @course) do |form| %>
-  Name: <br>
-  <%= form.text_field(:name) %> <br> 
-  Hours: <br>
-  <%= form.text_field(:hours) %> <br /><br />
-<%= form.submit  class: "btn btn-primary" %>
-<% end %>
+<div class="row">
+
+  <div class="col-sm-4">
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+
+        <%= form_with(model: @course) do |form| %>
+          Name: <br>
+          <%= form.text_field(:name) %> <br> 
+          Hours: <br>
+          <%= form.text_field(:hours) %> <br /><br />
+        <%= form.submit  class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

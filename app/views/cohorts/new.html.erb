@@ -1,17 +1,31 @@
 <h1>Add Cohort</h1>
 <hr>
 
-<%= form_with(model: @cohort) do |form| %>
-  <strong> Name:</strong> <br>
-  <%= form.text_field(:name) %> <br>
-  <strong>Start Date:</strong> <br>
-  <%= form.text_field(:start_date) %> <br>
-  <strong>End Date:</strong> <br>
-  <%= form.text_field(:end_date) %> <br>
-  <strong>Class Size:</strong> <br>
-  <%= form.text_field(:class_size) %> <br>
-  <strong>Course:</strong> <br>
-  <%# <%= form.text_field(:course_id) %> 
-  <%= form.select :course_id, Course.all.collect { |p| [ p.name, p.id ] }, include_blank: true %> <br><br>
-<%= form.submit class: "btn btn-primary" %>
-<% end %>
+<div class="row">
+
+  <div class="col-sm-4">
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <%= form_with(model: @cohort) do |form| %>
+          <strong> Name:</strong> <br>
+          <%= form.text_field(:name) %> <br>
+          <strong>Start Date:</strong> <br>
+          <%= form.text_field(:start_date) %> <br>
+          <strong>End Date:</strong> <br>
+          <%= form.text_field(:end_date) %> <br>
+          <strong>Class Size:</strong> <br>
+          <%= form.text_field(:class_size) %> <br>
+          <strong>Course:</strong> <br>
+          <%# <%= form.text_field(:course_id) %> 
+          <%= form.select :course_id, Course.all.collect { |p| [ p.name, p.id ] }, include_blank: true %> <br><br>
+        <%= form.submit class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

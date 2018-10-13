@@ -1,10 +1,30 @@
 <h1>Edit Cohort</h1>
 <hr>
-<%= form_with(model: @course) do |form| %>
-        <label>Name:</label> <%= form.text_field(:name) %><br />
-        <label>Start Date:</label> <%= form.date_field(:start_date) %><br />
-        <label>End Date:</label> <%= form.date_field(:end_date) %><br />
-        <label>Class Size:</label> <%= form.number_field(:class_size) %><br />
-        <label>Course:</label> <%= form.number_field(:course) %><br /><br />
-        <%= form.submit class: "btn btn-primary" %>
-      <% end %>
+
+<div class="row">
+
+  <div class="col-sm-4">
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <%= form_with(model: @course) do |form| %>
+          <label>Name:</label> <br>
+          <%= form.text_field(:name) %><br />
+          <label>Start Date:</label> <br>
+          <%= form.date_field(:start_date) %><br />
+          <label>End Date:</label> <br>
+          <%= form.date_field(:end_date) %><br />
+          <label>Class Size:</label> <br>
+          <%= form.number_field(:class_size) %><br />
+          <label>Course:</label> <br>
+          <%= form.number_field(:course) %><br /><br />
+          <%= form.submit class: "btn btn-primary", value: "Update Cohort"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
