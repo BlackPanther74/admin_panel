@@ -1,4 +1,5 @@
 class InstructorsController < ApplicationController
+  before_action :authorize
 
   def index
     @instructors = Instructor.all
