@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="instructor<%= instructor.id %>">
   <div class="col-sm-4">
   </div>
 
@@ -6,16 +6,16 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <label><strong>Username:</strong></label> <br>
+        <label><strong>First Name:</strong></label> <br>
         <%= instructor.first_name %> <br>
-        <label><strong>Password:</strong></label> <br>
+        <label><strong>Last Name:</strong></label> <br>
         <%= instructor.last_name %> <br>
-        <label><strong>age:</strong></label> <br>
+        <label><strong>Age:</strong></label> <br>
         <%= instructor.age %> <br>
-        <label><strong>education:</strong></label> <br>
+        <label><strong>Salary:</strong></label> <br>
         <%= instructor.salary %> <br>
-        <label><strong>Password:</strong></label> <br>
-        <%= instructor.education %> <br>
+        <label><strong>Education:</strong></label> <br>
+        <%= instructor.education %> <br><br>
         <strong>Created At:</strong> <%= instructor.created_at_formatted %> <br />
         <strong>Updated At:</strong> <%= instructor.updated_at_formatted %> <br /> <br>
 

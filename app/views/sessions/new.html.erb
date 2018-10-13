@@ -3,21 +3,19 @@
 
 <div class="row">
   <div class="col-sm-4">
-  </div>
-
-
-  <div class="col-sm-4">
-    <div class="card">
-      <div class="card-body">
-<%= form_with scope: 'session', method: :post, url: login_path do |f| %>
-  <%= f.label :email%> <br>
-  <%= f.text_field :email %> <br>
-  <%= f.label :password%> <br>
-  <%= f.password_field  :password %> <br> <br>
-  <%= f.submit  class: "btn btn-primary", value: "Log In"%> <br>
-<% end %>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <%= form_with scope: 'session', method: :post, url: login_path do |f| %>
+            <%= f.label :email, class: "form-group"%> <br>
+            <%= f.text_field :email, class: "form-control", placeholder: "Enter Email" %> <br>
+            <%= f.label :password%> <br>
+            <%= f.password_field  :password, class: "form-control", placeholder: "Enter Password" %> <br> <br>
+            <%= f.submit  class: "btn btn-primary", value: "Log In"%> <br>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<hr>
+  <hr>

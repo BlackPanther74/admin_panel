@@ -1,4 +1,5 @@
 <h1>Add Instructor</h1>
+<%= link_to "Back", :back, class: "btn btn-secondary" %>
 <hr>
 
 <div class="row">
@@ -20,7 +21,9 @@
   <label>Salary:</label> <br>
   <%= form.text_field(:salary) %><br />
   <label>Education:</label> <br>
-  <%= form.text_field(:education) %><br /><br />
+  <%# <%= form.text_field(:education) %><br /><br /> %>
+  <%= form.select :option , include_blank: true %> <br><br>
+
   <%= form.submit class: "btn btn-primary" %>
 <% end %>
       </div>
