@@ -1,30 +1,17 @@
 class InstructorsController < ApplicationController
-  # get '/instructors' do
-  #   @instructors = instructor.all
-  #   erb :index
-  # end
+
   def index
     @instructors = Instructor.all
   end
 
-  # get '/instructors/:id' do
-  #   @instructors = instructor.find(params[:id])
-  #   erb :show
-  # end
   def show
     @instructor = Instructor.find(params[:id])
   end
 
-  # get '/instructors/:id/edit' do
-  #    erb :edit
-  # end
   def edit
     @instructor = Instructor.find(params[:id])
   end
 
-  # put '/instructors/:id' do
-  #   
-  # end
   def update
     instructor = Instructor.find(params[:id])
     Instructor.update(
@@ -35,31 +22,24 @@ class InstructorsController < ApplicationController
       education: params[:instructor][:education]
     )
 
-    # goes to show page
     redirect_to instructor_path(instructor)
   end
 
-  # delete '/instructors/:id' do
-  #   
-  # end
   def destroy
     instructor = Instructor.find(params[:id])
     Instructor.destroy
-    # instructor.destroy(params[:id])
 
-    redirect_to instructors_path
+    respond_to do |format|
+      format.html
+      format.js {render '/instructors/destroy.js.erb'}
+    end
+
   end
 
-  # get '/instructors/new' do
-  #   erb :new
-  # end
   def new
     @instructor = Instructor.new
   end
 
-  # get '/instructors' do
-  #   
-  # end
   def create
     # user = User.create(
     # )
@@ -79,7 +59,6 @@ class InstructorsController < ApplicationController
       # cohort_id: nil
     )
 
-    # redirect_to '/instructors/new'
     redirect_to instructors_path
   end
 end

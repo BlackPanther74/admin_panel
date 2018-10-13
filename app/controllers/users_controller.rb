@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authorize, except: [:new, :create]
+  before_action :authorize, except: [:new, :create]
 
   def index
     @users = User.all
@@ -25,7 +25,10 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.destroy
 
-    redirect_to users_path
+    respond_to do |format|
+      format.html
+      format.js {render '/users/destroy.js.erb'}
+    end
   end
 
   def new
@@ -51,7 +54,6 @@ class UsersController < ApplicationController
 
     session[:user_id] = user.id
 
-    # redirect_to '/users/new'
   end
 
   private 
