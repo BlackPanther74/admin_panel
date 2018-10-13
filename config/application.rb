@@ -16,8 +16,4 @@ module AdminPanel
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
-
-  Raven.configure do |config|
-    config.dsn = 'https://6891af354b5e42a0b511ef75bd021b84:a2b6af1118db430eace962005daa30cc@sentry.io/1300339'
-  end
 end
