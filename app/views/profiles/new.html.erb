@@ -1,8 +1,8 @@
 <h1>Profiles#new</h1>
 <p>Find me in app/views/profiles/new.html.erb</p>
 
-<%= form_with(model: @profile) do |form| %>
-  First Name: <%= form.text_field(:first_name) %> 
-  Last Name: <%= form.text_field(:last_name) %> <br /><br />
+<%= bootstrap_form_with(model: @profile) do |form| %>
+  <%= form.text_field :role, label: "Role:" %>
+  <%= form.text_field :status, label: "Status" %>
   <%= form.submit %>
 <% end %>

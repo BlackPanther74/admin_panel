@@ -8,16 +8,12 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body form-group">
-        <%= form_with(model: @user) do |form| %>
-          <strong><label>Name:</label></strong> <br>
-          <%= form.text_field(:name) %><br />
-          <label>Email:</label> <br>
-          <%= form.text_field(:email) %><br />
-          <label>Password:</label> <br>
-          <%= form.password_field(:password) %><br />
-          <label>Password:</label> <br>
-          <%= form.password_field(:password_confirmation) %><br /><br />
-          <%= form.submit class: "btn btn-primary"%>
+        <%= bootstrap_form_with(model: @user) do |form| %>
+          <%= form.text_field :name, label: "Name:" %>
+          <%= form.text_field :email, label: "Email:" %>
+          <%= form.password_field :password, label: "Password:" %>
+          <%= form.password_field :password_confirmation, label: "Confirm Password:" %>
+          <%= form.submit class: "btn btn-primary", value: "Update"%>
         <% end %>
       </div>
     </div>

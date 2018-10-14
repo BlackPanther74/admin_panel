@@ -15,15 +15,11 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-        <%= form_with model: @user do |f| %>
-          <%= f.label :name %> <br>
-          <%= f.text_field :name, class: "form-control", placeholder: "Enter Name" %><br />
-          <%= f.label :email %> <br>
-          <%= f.text_field :email, class: "form-control", placeholder: "Enter Email" %><br />
-          <%= f.label :password %> <br>
-          <%= f.password_field :password, class: "form-control", placeholder: "Enter Password" %><br />
-          <%= f.label :password_confirmation %> <br>
-          <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %><br/><br>
+        <%= bootstrap_form_with model: @user do |f| %>
+          <%= f.text_field :name, label: "Name:", placeholder: "Enter Name" %>
+          <%= f.text_field :email, label: "Email:", placeholder: "Enter Email" %>
+          <%= f.password_field :password, label: "Password:", placeholder: "Enter Password" %>
+          <%= f.password_field :password_confirmation, label: "Password Confirmation:", placeholder: "Confirm Password" %>
           <%= f.submit class: "btn btn-primary btn-block", value: "Submit" %>
         <% end %>
       </div>

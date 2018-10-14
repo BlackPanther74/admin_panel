@@ -11,12 +11,10 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="card-body">
-      <%= form_with(model: @course) do |form| %>
-        <label>Name:</label> <br>
-        <%= form.text_field(:name) %><br />
-        <label>Hours:</label> <br>
-        <%= form.text_field(:hours) %><br /><br />
-        <%= form.submit class: "btn btn-primary" %>
+        <%= bootstrap_form_with(model: @course) do |form| %>
+          <%= form.text_field :name, label: "Name:" %>
+          <%= form.text_field :hours, label: "Hours:" %>
+        <%= form.submit  class: "btn btn-primary", value: "Update" %>
       <% end %>
       </div>
     </div>

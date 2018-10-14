@@ -8,8 +8,8 @@
         <label><strong>Email:</strong></label> <%= profile.email %>
         <label><strong>Role:</strong></label> <%= profile.role %>
         <label><strong>Status:</strong></label> <%= profile.status %>
-        <%# <strong>Created At:</strong> <%= user.created_at_formatted %><br />
-        <%# <strong>Updated At:</strong> <%= user.updated_at_formatted %><br />
+        <strong>Created At:</strong> <%= profile.created_at_formatted %>
+        <strong>Updated At:</strong> <%= profile.updated_at_formatted %>
 
         <div><%= link_to "View", profile_path(profile) %></div>
         <div><%= link_to "Edit", edit_profile_path(profile) %></div>
