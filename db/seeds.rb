@@ -7,21 +7,20 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Course.create(name: 'Full Stack Web Developer',
-  hours: 450
-  )
+  hours: 450)
 Course.create(name: 'Software Engineering Intensive',
    hours: 560)
 Cohort.create(name: 'March - FSWD',
-start_date: "3/1/2018",
-end_date: "6/15/2018",
+start_date: DateTime.new(2018,01,03),
+end_date: DateTime.new(2018,15,06),
 course_id: 1)
 Cohort.create(name: 'August - SEI',
-start_date: "8/1/2018",
-end_date: "11/15/2018",
-course_id: 1)
+start_date: DateTime.new(2018,01,08),
+end_date: DateTime.new(2018,15,11),
+course_id: 2)
 Cohort.create(name: 'July - FSWD',
-start_date: "7/23/2018",
-end_date: "11/1/2018",
+start_date: DateTime.new(2018,23,07),
+end_date: DateTime.new(2018,01,11),
 course_id: 1)
 Instructor.create(first_name: 'Miller',
       last_name:'Thyme',
@@ -29,8 +28,8 @@ Instructor.create(first_name: 'Miller',
       salary: 50000,
       education: 'Masters',
       cohort_id: 1)
-Instructor.create(first_name: 'Big',
-      last_name: 'Red',
+Instructor.create(first_name: 'Red',
+      last_name: 'Herring',
       age: 28,
       salary: 65000,
       education: 'PhD',
@@ -49,9 +48,9 @@ Student.create(first_name: 'Franklin',
       last_name: 'Bado',
       age: 28,
       education: 'College')
-StudentsCohort.create(student_id: 1,
+Cohortsstudent.create(student_id: 1,
             cohort_id: 1)
-StudentsCohort.create(student_id: 1,
+Cohortsstudent.create(student_id: 1,
             cohort_id: 2)
-StudentsCohort.create(student_id: 2,
+Cohortsstudent.create(student_id: 2,
             cohort_id: 1)
