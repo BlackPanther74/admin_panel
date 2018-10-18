@@ -44,7 +44,7 @@ class ProfilesController < ApplicationController
     profile = Profile.create(
       email: params[:profile][:email],
       role: params[:profile][:role],
-      status: params[:profile][status],
+      status: params[:profile][:status],
       user_id: user.id
     )
 
