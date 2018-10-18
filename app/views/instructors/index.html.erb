@@ -4,5 +4,36 @@
 <hr>
 
 <% @instructors.each do |instructor| %>
-  <%= render partial: 'instructor', locals: { instructor: instructor } %>
-<% end %>
+<div class="row" id="to_delete">
+  <span id="instructor<%= instructor.id %>"></span>
+  <div class="col-sm-4">
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <label><strong>First Name:</strong></label> <br>
+        <%= instructor.first_name %> <br>
+        <label><strong>Last Name:</strong></label> <br>
+        <%= instructor.last_name %> <br>
+        <label><strong>Age:</strong></label> <br>
+        <%= instructor.age %> <br>
+        <label><strong>Salary:</strong></label> <br>
+        <%= instructor.salary %> <br>
+        <label><strong>Education:</strong></label> <br>
+        <%= instructor.education %> <br>
+        <label><strong>Cohort:</strong></label> <br>
+        <%# <% if (instructor.cohort_id == true) <br><br> %>
+        <strong>Created At:</strong> <%= instructor.created_at_formatted %> <br />
+        <strong>Updated At:</strong> <%= instructor.updated_at_formatted %> <br /> <br>
+
+        <%= link_to "View", instructor_path(instructor), class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_instructor_path(instructor), class: "btn btn-success" %>
+        <%= link_to(instructor_path(id: instructor.id), method: :delete, remote: true) do %>
+        <span>"delete"</span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr><% end %>

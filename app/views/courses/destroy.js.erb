@@ -1,2 +1,4 @@
-let div<%=course.id %> = document.querySelector("#course" + "<%= course.id %>")
-div<%= course.id %>.remove();
+let div<%=@course.id %> = document.querySelector("#course" + "<%= @course.id %>")
+div<%= @course.id %>.remove();
+div=document.getElementById("course<%=@course.id%>")
+div.style.display="none"

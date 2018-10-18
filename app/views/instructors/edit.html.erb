@@ -17,6 +17,7 @@
           <%= form.text_field :age, label: "Age:" %>
           <%= form.text_field :salary, label: "Salary:" %>
           <%= form.select :education, ['High School', 'College', 'Masters', 'PhD'], include_blank: true, label: "Education:" %>
+          <%= form.select :cohort_id, Cohort.all.collect { |p| [ p.name, p.id ] }, include_blank: true, label: "Cohort:" %>
           <%= form.submit class: "btn btn-primary", value: "Update"%>
         <% end %>
       </div>

@@ -27,7 +27,7 @@ class ProfilesController < ApplicationController
 
   def destroy
     profile = Profile.find(params[:id])
-    Profile.destroy
+    profile.destroy
 
     respond_to do |format|
       format.html

@@ -26,12 +26,12 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    student = Student.find(params[:id])
-    Student.destroy
+    @student = Student.find(params[:id])
+    @student.destroy
 
     respond_to do |format|
       format.html
-      format.js {render '/students/destroy.js.erb'}
+      format.js
     end
 
   end

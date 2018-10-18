@@ -15,13 +15,18 @@
         <label><strong>Class Size:</strong></label> <br>
         <%= cohort.class_size %> <br>
         <label><strong>Course:</strong></label> <br>
-        <%= cohort.course_id %> <br>
+        <%= cohort.course.name %> <br>
+        <label><strong>Instructor:</strong></label> <br>
+        <%# <%= cohort.instructor.id %> <br><br> %>
         <strong>Created At:</strong> <%= cohort.created_at_formatted %><br />
         <strong>Updated At:</strong> <%= cohort.updated_at_formatted %><br /> <br>
 
         <%= link_to "View", cohort_path(cohort), class: "btn btn-primary" %>
         <%= link_to "Edit", edit_cohort_path(cohort), class: "btn btn-success" %>
-        <%= link_to "Delete", cohort_path(cohort), remote: true, method: :delete, class: "btn btn-danger" %></div> <br />
+
+        <%= link_to(cohort_path(id: cohort.id), method: :delete, remote: true) do %>
+        <span>"delete"</span>
+        <% end %>
       </div>
     </div>
   </div>

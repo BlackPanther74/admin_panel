@@ -1,4 +1,4 @@
-<div class="row" id="instructor<%= instructor.id %>">
+<div class="row instructor<%= instructor.id %>">
   <div class="col-sm-4">
   </div>
 
@@ -14,7 +14,9 @@
         <label><strong>Salary:</strong></label> <br>
         <%= instructor.salary %> <br>
         <label><strong>Education:</strong></label> <br>
-        <%= instructor.education %> <br><br>
+        <%= instructor.education %> <br>
+        <label><strong>Cohort:</strong></label> <br>
+        <% if (instructor.cohort_id == true) <br><br>
         <strong>Created At:</strong> <%= instructor.created_at_formatted %> <br />
         <strong>Updated At:</strong> <%= instructor.updated_at_formatted %> <br /> <br>
 

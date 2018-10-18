@@ -15,24 +15,25 @@ class InstructorsController < ApplicationController
 
   def update
     instructor = Instructor.find(params[:id])
-    Instructor.update(
+    instructor.update(
       first_name: params[:instructor][:first_name],
       last_name: params[:instructor][:last_name],
       age: params[:instructor][:age],
-      salary: params[instructor][:salary],
-      education: params[:instructor][:education]
+      salary: params[:instructor][:salary],
+      education: params[:instructor][:education],
+      cohort_id: params[:instructor][:cohort_id]
     )
 
     redirect_to instructor_path(instructor)
   end
 
   def destroy
-    instructor = Instructor.find(params[:id])
-    Instructor.destroy
+    @instructor = Instructor.find(params[:id])
+    @instructor.destroy
 
     respond_to do |format|
       format.html
-      format.js {render '/instructors/destroy.js.erb'}
+      format.js
     end
 
   end
@@ -55,9 +56,9 @@ class InstructorsController < ApplicationController
       last_name: params[:instructor][:last_name],
       age: params[:instructor][:age],
       salary: params[:instructor][:salary],
-      education: params[:instructor][:education]
+      education: params[:instructor][:education],
       # profile_id: nil,
-      # cohort_id: nil
+      cohort_id: params[:instructor][:cohort_id]
     )
 
     redirect_to instructors_path

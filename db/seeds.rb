@@ -11,16 +11,16 @@ Course.create(name: 'Full Stack Web Developer',
 Course.create(name: 'Software Engineering Intensive',
    hours: 560)
 Cohort.create(name: 'March - FSWD',
-start_date: DateTime.new(2018,01,03),
-end_date: DateTime.new(2018,15,06),
+start_date: '2018-01-03',
+end_date: '2018-15-06',
 course_id: 1)
 Cohort.create(name: 'August - SEI',
-start_date: DateTime.new(2018,01,08),
-end_date: DateTime.new(2018,15,11),
+start_date: '2018-01-08',
+end_date: '2018-15-11',
 course_id: 2)
 Cohort.create(name: 'July - FSWD',
-start_date: DateTime.new(2018,23,07),
-end_date: DateTime.new(2018,01,11),
+start_date: '2018-23-07',
+end_date: '2018-01-11',
 course_id: 1)
 Instructor.create(first_name: 'Miller',
       last_name:'Thyme',
