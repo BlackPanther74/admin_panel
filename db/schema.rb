@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2018_09_28_074247) do
   end
 
   create_table "cohortsstudents", force: :cascade do |t|
-    t.bigint "cohorts_id"
+    t.bigint "cohort_id"
     t.bigint "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["cohorts_id"], name: "index_cohortsstudents_on_cohorts_id"
+    t.index ["cohort_id"], name: "index_cohortsstudents_on_cohort_id"
     t.index ["student_id"], name: "index_cohortsstudents_on_student_id"
   end
 
