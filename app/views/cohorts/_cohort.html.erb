@@ -25,7 +25,7 @@
         <%= link_to "Edit", edit_cohort_path(cohort), class: "btn btn-success" %>
 
         <%= link_to(cohort_path(id: cohort.id), method: :delete, remote: true) do %>
-        <span>"delete"</span>
+        <span class="btn btn-danger">Delete</span>
         <% end %>
       </div>
     </div>
