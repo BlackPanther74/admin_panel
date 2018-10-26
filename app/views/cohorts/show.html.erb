@@ -1,5 +1,27 @@
 <h1>Cohort Profile</h1>
+
 <%= link_to "Cancel", :back, class: "btn btn-secondary" %>
+
 <hr>
 
+  <div class="col-sm-4">
+  </div>
+
+  <div class="col-sm-4 offset-sm-4">
+<%= bootstrap_form_with model: @cohortsstudents do |form| %>
+  <%= form.select :student_id, options_for_select(@students), label: "Add Student"%>
+  <%= form.hidden_field :cohort_id, value: @cohort.id%>
+  <%= form.submit %>
+<% end %>
+</div>
+<br>
+
 <%= render partial: 'cohort', locals: { cohort: @cohort } %>
+
+<h2>Students in this cohort</h2>
+<%@cohort.students.each do |student| %>
+  <%=student.first_name%> <%=student.last_name%> <br>
+<% end %>
+
+
+

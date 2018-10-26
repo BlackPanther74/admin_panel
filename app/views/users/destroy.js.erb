@@ -1,2 +1,4 @@
-let div<%=user.id %> = document.querySelector(".user" + "<%= user.id %>")
-div<%= user.id %>.remove();
+let div<%=@user.id %> = document.querySelector("#user" + "<%= @user.id %>")
+div<%= @user.id %>.remove();
+div=document.getElementById("user<%=@user.id%>")
+div.style.display="none"

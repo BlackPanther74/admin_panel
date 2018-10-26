@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cohortsstudents/new'
+  get 'cohortsstudents/create'
   resources :users, except: [:new]
   resources :profiles
   resources :courses
@@ -17,5 +19,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/signup', to: 'users#new', as: 'signup'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
+
+  post '/cohorts/:id', to: 'cohortsstudents#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

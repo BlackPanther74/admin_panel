@@ -1,7 +1,6 @@
 <div class="row" id="cohort<%= cohort.id %>" >
   <div class="col-sm-4">
   </div>
-    <div id></div>
 
   <div class="col-sm-4">
     <div class="card">
@@ -16,14 +15,15 @@
         <%= cohort.class_size %> <br>
         <label><strong>Course:</strong></label> <br>
         <%= cohort.course.name %> <br>
+        <% if ((cohort.instructor) != nil )%>
         <label><strong>Instructor:</strong></label> <br>
-        <%# <%= cohort.instructor.id %> <br><br> %>
+        <%=cohort.instructor.first_name%> <%=cohort.instructor.last_name%>
+        <% end %> <br><br> 
         <strong>Created At:</strong> <%= cohort.created_at_formatted %><br />
         <strong>Updated At:</strong> <%= cohort.updated_at_formatted %><br /> <br>
 
         <%= link_to "View", cohort_path(cohort), class: "btn btn-primary" %>
         <%= link_to "Edit", edit_cohort_path(cohort), class: "btn btn-success" %>
-
         <%= link_to(cohort_path(id: cohort.id), method: :delete, remote: true) do %>
         <span class="btn btn-danger">Delete</span>
         <% end %>

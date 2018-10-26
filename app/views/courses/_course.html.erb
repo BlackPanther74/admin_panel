@@ -16,7 +16,7 @@
         <%= link_to "View", course_path(course), class: "btn btn-primary" %>
         <%= link_to "Edit", edit_course_path(course), class: "btn btn-success" %>
         <%= link_to(course_path(id: course.id), method: :delete, remote: true) do %>
-        <span>"delete"</span>
+        <span class="btn btn-danger">Delete</span>
         <% end %>
       </div>
     </div>
