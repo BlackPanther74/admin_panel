@@ -3,4 +3,8 @@
 
 <hr>
 
-<%= render partial: 'instructor', locals: { instructor: @instructor } %>
+<% @instructors.each do |instructor| %>
+
+<%= render partial: 'instructor', locals: { instructor: instructor } %>
+
+<% end %>
